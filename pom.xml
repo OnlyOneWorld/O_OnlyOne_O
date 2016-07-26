@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>o_OnlyOne_o</groupId>
+  <artifactId>O_OnlyOne_O</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+  
+  <!-- 添加项目依赖包的版本号描述 -->
+  <properties>
+  	<!-- 添加单元测试包 -->
+  	<junit.version>4.10</junit.version>
+  	
+  	<!-- 添加spring3.2.8依赖包的版本描述 -->
+  	<spring.version>3.2.8.RELEASE</spring.version>
+  
+  	<!-- 添加Hibernate4.3.8依赖jar包 -->
+  	<hibernate.version>4.2.8.Final</hibernate.version>
+  
+  	<!-- 添加sevlet版本 -->
+  	<servlet.version>3.1.0</servlet.version>
+  	
+  	<!-- jetty的版本 -->
+  	<jetty.version>9.3.6.v20151106</jetty.version>
+  
+  	<!-- struts版本 -->
+  	<struts.version>2.3.24</struts.version>
+  
+  	<!-- 添加ognl依赖jar包的版本 -->
+  	<ognl.version>3.0.6</ognl.version>
+  	
+  	<!-- tomcat的版本 -->
+  	<tomcat.version>2.2</tomcat.version>
+  	
+  	<!-- mysql驱动包的版本 -->
+  	<mysql.version>5.1.38</mysql.version>
+  	
+  	<!-- ****************************数据库连接池的jar包版本**************************** -->
+  	<!-- 其中数据库连接池有： C3P0，Druid，DBCP等，在这里使用 Druid-->
+  	<druid.version>1.0.18</druid.version>
+  	<!-- ****************************数据库连接池的jar包版本**************************** -->
+  	
+  	<!-- 使用Spring的aop时需要使用到aspectjweaver包，所以需要添加aspectjweaver包 -->
+  	<aspectjweaver.version>1.8.9</aspectjweaver.version>
+  	
+  </properties>
+  
+  
+</project>
