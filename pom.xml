@@ -44,5 +44,161 @@
   	
   </properties>
   
+  <dependencies>
+	<!-- 添加单元测试包 -->
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>${junit.version}</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<!-- 添加spring的依赖jar包 -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-core</artifactId>
+	    <version>${spring.version}</version>
+	</dependency>
+	<dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-expression</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-orm</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    
+    <!-- 添加Java servlet -->
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>${servlet.version}</version>
+	    <!-- 设置在编译时运行 -->
+	    <scope>provided</scope>
+	</dependency>
+	
+	<!-- 添加struts2依赖jar包 -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-core</artifactId>
+	    <version>${struts.version}</version>
+	    <!--
+	            这里的 exclusions 是排除包，因为 Struts2中有javassist，Hibernate中也有javassist,
+	            所以如果要整合Hibernate，一定要排除掉Struts2中的javassist，否则就冲突了。
+	            <exclusions>
+	                <exclusion>
+	                    <groupId>javassist</groupId>
+	                    <artifactId>javassist</artifactId>
+	                </exclusion>
+	            </exclusions> 
+	     -->
+	</dependency>
+	
+	<!-- struts2和Spring整合时需要使用到的插件 -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-spring-plugin</artifactId>
+	    <version>${struts.version}</version>
+	</dependency>
+	
+	<!-- 使用了这个插件之后，就可以采用注解的方式配置Struts的Action，免去了在struts.xml中的繁琐配置项 -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-convention-plugin</artifactId>
+	    <version>${struts.version}</version>
+	</dependency>
+	
+	<!-- config-browser-plugin插件不是必须的，但是使用了这个插件之后，就可以很方便的浏览项目中的所有action及其与 jsp view的映射 -->
+	<dependency>
+	    <groupId>org.apache.struts</groupId>
+	    <artifactId>struts2-config-browser-plugin</artifactId>
+	    <version>${struts.version}</version>
+	</dependency>
+	<!-- 添加ognl依赖jar包 -->
+	<dependency>
+	    <groupId>ognl</groupId>
+	    <artifactId>ognl</artifactId>
+	    <version>${ognl.version}</version>
+	</dependency>
+	<!-- 添加Hibernate依赖包 -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>${hibernate.version}</version>
+	</dependency>
+	
+	<!-- 添加mysql依赖jar包 -->
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>${mysql.version}</version>
+	</dependency>
+	
+	<!-- ****************************数据库连接池的jar包**************************** -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>druid</artifactId>
+	    <version>${druid.version}</version>
+	</dependency>
+	<!-- ****************************数据库连接池的jar包**************************** -->
+	
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>${aspectjweaver.version}</version>
+	</dependency>
+    
+  </dependencies>
+  <build>
+  	<finalName>onlyOne</finalName>
+  	<plugins>
+  		<plugin>
+  			<!-- 使用tomcat作为web容器，将jetty注释掉
+	 		<groupId>org.eclipse.jetty</groupId>
+		    <artifactId>jetty-maven-plugin</artifactId>
+		    <version>${jetty.version}</version>
+		     -->
+		    
+		    <groupId>org.apache.tomcat.maven</groupId>
+	        <artifactId>tomcat7-maven-plugin</artifactId>
+	        <version>${tomcat.version}</version>
+		    <!-- 在打包的阶段就使用jetty:run来直接运行 -->
+		    <executions>
+		    	<execution>
+		    		<!-- 设置在打包的阶段 -->
+		    		<phase>package</phase>
+		    		<goals>
+		    			<goal>
+		    				run
+		    			</goal>
+		    		</goals>
+		    	</execution>
+		    </executions>
+  		</plugin>
+  	</plugins>
+  </build>
+  
   
 </project>
