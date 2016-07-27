@@ -21,13 +21,11 @@ public class UserServiceImpl implements UserServiceI {
 	@Autowired
 	private UserDaoI userDao;
 	
-	@Override
 	public void test() {
 
 		System.out.println("Hello world!");
 	}
 
-	@Override
 	public Serializable save(User user) {
 
 		return userDao.save(user);
