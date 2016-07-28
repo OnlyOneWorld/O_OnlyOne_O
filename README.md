@@ -1,5 +1,3 @@
-每一次发现的问题在readme.md文件里进行总结，避免相同的问题犯超过两次。
-
 # O_OnlyOne_O
 首次创建团队协作项目，欢迎加入！欢迎邮箱@me by ltwuyanlong@163.com
 
