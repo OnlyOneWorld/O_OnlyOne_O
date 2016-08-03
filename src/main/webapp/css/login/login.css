@@ -1,1 +1,7 @@
-@CHARSET "UTF-8";
+.InputStyle{
+	width:500px;
+	hight:80px;
+}
+.form-horizontal .controls {
+    margin-left: 99px!important;
+}

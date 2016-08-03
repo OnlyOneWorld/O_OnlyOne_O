@@ -1,1 +1,39 @@
-@CHARSET "UTF-8";
+.loginDemo1{
+	/*background-color: paleturquoise;*/
+	height: 200px;
+	width: 400px;
+	position:absolute;
+	padding-left: 150px;
+	padding-top: 100px;
+	margin-top: 10px;
+}
+.img_username{
+	color: red;
+	background-image: url(../../img/loginDemoPng/error_message_pic.png);
+	background-repeat: no-repeat;
+}
+.username1{
+	background-image: url(../../img/loginDemoPng/username.png);
+	background-repeat: no-repeat;
+	padding-left:25px !important ;
+	height: 25px;
+	width: 300px;
+	
+}
+.password1{
+	background-image: url(../../img/loginDemoPng/password.png);
+	background-repeat: no-repeat;
+	padding-left: 25px !important;
+	height: 25px;
+	width: 300px;
+}
+#check{
+	width: 120px;
+	background-image: url(../../img/loginDemoPng/check.png);
+	background-repeat: no-repeat;
+	padding-left:28px; !important;
+}
+.style{
+	height:300px ;
+	
+}
