@@ -1,8 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
 <!-- 模态弹出框登陆表单 -->
+<script language="javascript">  
+function myReload() {  
+    document.getElementById("CreateCheckCode").src = document  
+            .getElementById("CreateCheckCode").src  
+            + "?nocache=" + new Date().getTime();  
+}
+</script>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -38,6 +44,8 @@
 		    <div class="input-prepend">
 		      <span class="add-on" style="height:46px;width: 46px;"><i class="icon-th" style="margin-top:12px;"></i></span>
 		      <input class="span4 form-control" style="width:120px;height:46px;" id="inputIcon" type="text" placeholder="验证码">
+		      <img src="PictureCheckCode" id="CreateCheckCode" align="middle">
+              <a href="" onclick="myReload()"> 看不清,换一个</a>  
 		    </div>
 		  </div>
 		</div>
@@ -50,4 +58,4 @@
       </div>
     </div>
   </div>
-</div>	
+</div>

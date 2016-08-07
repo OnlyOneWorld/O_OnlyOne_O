@@ -28,7 +28,7 @@ public class TestAction {
     private UserServiceI userService;
 
     /**
-     * http://localhost:8080//O_OnlyOne_O/strust2Test!test.action
+     * http://localhost:8080/O_OnlyOne_O/strust2Test!test.action
      * MethodName: test
      * Description: 
      */
