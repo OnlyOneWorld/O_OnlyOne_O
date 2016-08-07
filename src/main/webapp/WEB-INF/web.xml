@@ -57,4 +57,15 @@
         <servlet-name>druidStatView</servlet-name>
         <url-pattern>/druid/*</url-pattern>
     </servlet-mapping>
+    <servlet>  
+	    <description>输出验证码</description>  
+	    <display-name>This is the display name of my J2EE component</display-name>  
+	    <servlet-name>PictureCheckCode</servlet-name>  
+	    <servlet-class>style="COLOR: #ff0000"com.servlet.PictureCheckCode</servlet-class>  
+	  </servlet>  
+  
+	  <servlet-mapping>  
+	    <servlet-name>PictureCheckCode</servlet-name>  
+	    <url-pattern>/style="COLOR: #ff0000"jsp/login/PictureCheckCode</url-pattern>  
+	  </servlet-mapping>  
 </web-app>

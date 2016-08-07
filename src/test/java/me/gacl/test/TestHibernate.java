@@ -6,6 +6,13 @@ import java.util.UUID;
 import me.gacl.model.User;
 import me.gacl.service.UserServiceI;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+import org.hibernate.service.ServiceRegistryBuilder;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -30,7 +37,9 @@ private UserServiceI userService;
         userService = (UserServiceI) ac.getBean("userService");
     }
     
-    @Test
+   
+    
+    @Test 
     public void testSaveMethod(){
         User user = new User();
         user.setId(UUID.randomUUID().toString().replaceAll("-", ""));
