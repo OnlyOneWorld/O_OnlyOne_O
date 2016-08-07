@@ -22,6 +22,6 @@
     <context:property-placeholder location="classpath:config.properties"/>
     
     <!-- 设置注解自动扫描dao和service包下的Java文件 -->
-    <context:component-scan base-package="me.gacl.dao,me.gacl.dao.impl,me.gacl.service"></context:component-scan>
+    <context:component-scan base-package="com.matter.lifePlan.entity,me.gacl.dao,me.gacl.dao.impl,me.gacl.service"></context:component-scan>
     
     </beans>
