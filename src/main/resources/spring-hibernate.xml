@@ -76,8 +76,8 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
         <!-- 自动扫描注解方式配置的hibernate类文件 -->
         <property name="packagesToScan">
             <list>
-            	<!-- 测试环境所用 -->
-                <!-- --><value>me.gacl.model</value> 
+            	<!-- 测试环境所用 
+                <value>me.gacl.model</value>-->
                 <!-- 系统用户模块设计 -->
                 <value>com.matter.lifePlan.entity</value>
             </list>
@@ -127,8 +127,9 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
     <!-- 切面，将事物用在哪些对象上 -->
     <aop:config>
     	<!-- 测试使用 -->
-        <!-- <aop:pointcut id="transactionPointcut" expression="execution(* me.gacl.service..*Impl.*(..))" />
-        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" /> -->
+        <!--  
+        <aop:pointcut id="transactionPointcut" expression="execution(* me.gacl.service..*Impl.*(..))" />
+        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />-->
         
         <!-- 开发使用 -->
         <aop:pointcut id="transactionPointcut" expression="execution(* com.matter.lifePlan.service..*Impl.*(..))" />
