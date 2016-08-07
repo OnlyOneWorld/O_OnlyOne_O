@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
  * 
  */
 @Entity
-@Table(name = "onlyone_user_info", schema = "SSHE")
+@Table(name = "onlyone_user_info")
 public class Users {
 
 	/**
