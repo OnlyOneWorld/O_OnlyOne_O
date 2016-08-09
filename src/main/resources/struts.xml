@@ -27,15 +27,11 @@
     <!-- 对于WebLogic,Orion,OC4J此属性应该设置成true -->
     <constant name="struts.dispatcher.parametersWorkaround" value="false" />
 
+	<!-- 框架测试action编写 -->
     <package name="basePackage" extends="struts-default">
-		<!-- 
-		<action name="loginChkNumber" class="com.matter.VerificationCode.service.GenerateCheckNumber"  method="getChkNumber">
-			 <result type="stream">    
-		        <param name="contentType">image/jpeg</param>
-		        <param name="inputtName">inputStream</param>
-    		</result>
-		</action>
-		 -->
     </package>
-
+    
+    <!-- 用户注册模块action设计 -->
+    <package name="userRegister" extends="struts-default">
+    </package>
 </struts>

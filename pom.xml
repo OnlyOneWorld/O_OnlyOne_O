@@ -34,6 +34,9 @@
   	<!-- mysql驱动包的版本 -->
   	<mysql.version>5.1.38</mysql.version>
   	
+  	<!-- 假如log4j.jar2.2版本 -->
+  	<log4j.version>1.2.17</log4j.version>
+  	
   	<!-- ****************************数据库连接池的jar包版本**************************** -->
   	<!-- 其中数据库连接池有： C3P0，Druid，DBCP等，在这里使用 Druid-->
   	<druid.version>1.0.18</druid.version>
@@ -170,6 +173,11 @@
 	    <version>${aspectjweaver.version}</version>
 	</dependency>
     
+    <dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>${log4j.version}</version>
+	</dependency>
   </dependencies>
   <build>
   	<finalName>onlyOne</finalName>
