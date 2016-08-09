@@ -12,7 +12,7 @@
 	      <!-- 模态窗口的body:是一个用户登陆表单 -->
 	      <div class="modal-body">
 	      	<!-- 用户登陆表单设计 -->
-	      	<form class="form-horizontal">
+	      	<form class="form-horizontal" action="<%=request.getContextPath()%>/registerAction!userRegisterAction.action" method="psot">
 	      	  <!-- 用户邮箱 -->
 			  <div class="control-group">
 				  <div class="controls">
