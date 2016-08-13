@@ -28,4 +28,9 @@ public class UserServiceImpl implements UserService{
 	public Serializable save(Users users) {
 		return usersDao.saveUsers(users);
 	}
+
+	@Override
+	public int getUserByUserEmail(String hql,String condition) {
+		return usersDao.getUserByUserEmail(hql,condition);
+	}
 }

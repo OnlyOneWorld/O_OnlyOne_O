@@ -12,5 +12,9 @@ import com.matter.lifePlan.entity.Users;
  */
 public interface UserService{
 
-	Serializable save(Users user);
+	//保存用户
+	public Serializable save(Users user);
+	
+	//通过邮箱获取用户
+	public int getUserByUserEmail(String sql,String condition);
 }

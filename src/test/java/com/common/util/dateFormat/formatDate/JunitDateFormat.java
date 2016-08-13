@@ -22,7 +22,6 @@ public class JunitDateFormat {
 	{
 		//初始化日期格式化类
 		System.out.println("日期格式化开始: ");
-		
 	}
 	
 	@After
