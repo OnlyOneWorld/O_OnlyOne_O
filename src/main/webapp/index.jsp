@@ -32,9 +32,9 @@
 			</div>			
 		</div>
 		<!-- 将登陆页面包含进来 -->
-		<jsp:include page="jsp/login/login.jsp"></jsp:include>
+		<jsp:include page="jsp/login/login_modal.jsp"></jsp:include>
 
 		<!-- 将注册页面包含进来 -->
-		<jsp:include page="jsp/register/register.jsp"></jsp:include>
+		<jsp:include page="jsp/register/register_modal.jsp"></jsp:include>
 	</body>
 </html>

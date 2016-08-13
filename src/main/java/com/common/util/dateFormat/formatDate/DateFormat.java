@@ -15,7 +15,7 @@ public class DateFormat {
 	{
 		//设置日期格式
 		@SuppressWarnings("unused")
-		String formatStyle = "yyyy-mm-dd";
+		String formatStyle = "yyyy-MM-dd";
 		
 		//获取SimpleDateFormat对象
 		SimpleDateFormat sdf = new SimpleDateFormat(formatStyle);

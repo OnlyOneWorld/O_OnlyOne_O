@@ -14,5 +14,9 @@ import com.matter.lifePlan.entity.Users;
  */
 // extends BaseDao<Users> 
 public interface UsersDao{
+	//保存用户
 	public Serializable saveUsers(Users users);
+	
+	//通过邮箱获取用户
+	public int getUserByUserEmail(String sql,String condition);
 }
