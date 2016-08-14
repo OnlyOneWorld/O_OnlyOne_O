@@ -26,7 +26,8 @@
     me.gacl.dao,me.gacl.dao.impl,
     me.gacl.service,
     com.common.base,
-    com.matter.lifePlan"
+    com.matter.lifePlan,
+    "
     ></context:component-scan>  
     </beans>
     
