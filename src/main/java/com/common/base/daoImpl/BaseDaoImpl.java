@@ -21,6 +21,7 @@ import org.aspectj.lang.annotation.SuppressAjWarnings;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.common.base.dao.BaseDao;
@@ -31,14 +32,15 @@ import com.common.base.util.ObjectUtil;
  * @version 创建时间：2016-8-7 上午11:11:54 
  * 类说明 
  */
-@Repository
+@Repository("baseDao")
 public class BaseDaoImpl<T> implements BaseDao<T> {
 
 	protected Class<T> entityClazz;
 	
-	protected SessionFactory sessionFactory;
+	@Autowired
+	private SessionFactory sessionFactory;
 	
-	@SuppressWarnings({ "unchecked", "unused" })
+	@SuppressWarnings({ "unchecked"})
 	public BaseDaoImpl()
 	{
 		Type type = getClass().getGenericSuperclass();

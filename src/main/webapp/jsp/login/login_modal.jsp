@@ -20,35 +20,35 @@ function myReload() {
       <!-- 模态窗口的body:是一个用户登陆表单 -->
       <div class="modal-body">
       	<!-- 用户登陆表单设计 -->
-      	<form class="form-horizontal">
+      	<form class="form-horizontal" action="<%=request.getContextPath()%>/loginAction!login.action" method="post"/>
 		  <div class="control-group">
 			  <div class="controls">
 			    <div class="input-prepend">
 			      <span class="add-on" style="height:46px;width: 46px;"><i class="icon-user" style="margin-top:12px;"></i></span>
-			      <input class="span4 form-control" style="height:46px;" id="inputIcon" type="text"placeholder="用户名">
+			      <input class="span4 form-control" style="height:46px;" name="userEmail" id="inputIcon" type="text"placeholder="用户名">
 			    </div>
 			  </div>
 			</div>
 		  <div class="control-group">
-		  <div class="controls">
-		    <div class="input-prepend">
-		      <span class="add-on" style="height:46px;width: 46px;"><i class="icon-lock" style="margin-top:12px;"></i></span>
-		      <input class="span4" id="inputIcon" type="password" style="height:46px;" placeholder="密码">
-		    </div>
+			  <div class="controls">
+			    <div class="input-prepend">
+			      <span class="add-on" style="height:46px;width: 46px;"><i class="icon-lock" style="margin-top:12px;"></i></span>
+			      <input class="span4" id="inputIcon" type="password" name="userPassword" style="height:46px;" placeholder="密码">
+			    </div>
+			  </div>
 		  </div>
-		</div>
 		
-		<!-- 验证码 -->
-		<div class="control-group">
-		  <div class="controls">
-		    <div class="input-prepend">
-		      <span class="add-on" style="height:46px;width: 46px;"><i class="icon-th" style="margin-top:12px;"></i></span>
-		      <input class="span4 form-control" style="width:120px;height:46px;" id="inputIcon" type="text" placeholder="验证码">
-		      <img src="PictureCheckCode" id="CreateCheckCode" align="middle">
-              <a href="" onclick="myReload()"> 看不清,换一个</a>  
-		    </div>
-		  </div>
-		</div>
+			<!-- 验证码 -->
+			<div class="control-group">
+			  <div class="controls">
+			    <div class="input-prepend">
+			      <span class="add-on" style="height:46px;width: 46px;"><i class="icon-th" style="margin-top:12px;"></i></span>
+			      <input class="span4 form-control" style="width:120px;height:46px;" name="userCheckCode" id="inputIcon" type="text" placeholder="验证码">
+			      <img src="PictureCheckCode" id="CreateCheckCode" align="middle">
+	              <a href="" onclick="myReload()"> 看不清,换一个</a>  
+			    </div>
+			  </div>
+			</div>
 		  <div class="control-group">
 		    <div class="controls">
 		      <button type="submit" class="btn-primary btn" style="width:332px;height:46px;">Login in</button>
