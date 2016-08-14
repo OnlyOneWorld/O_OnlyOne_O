@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -24,8 +25,13 @@
 		<div class="main">
 			<div class="main-top">
 				<div class="logo">全世界首页</div>
-				<div class="login"><a href="pages/loginPage/loginPage.html" id="loginPage" data-toggle="modal" data-target="#myModal">登陆</a></div>
+				<c:if test="${empty requestScope.userEmail}">
+					<div class="login"><a href="pages/loginPage/loginPage.html" id="loginPage" data-toggle="modal" data-target="#myModal">登陆</a></div>
 				<div class="register"><a href="pages/loginPage/loginPage.html" data-toggle="modal" id="registerPage" data-target="#myRegister">注册</a></div>
+				</c:if>
+				<c:if test="${not empty requestScope.userEmail}">
+					<span>欢迎登陆<i style="color:red"><c:out value="${requestScope.userEmail }"></c:out></i></span>
+				</c:if>
 			</div>
 			<div class="main-footer">
 				

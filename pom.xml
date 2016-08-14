@@ -45,9 +45,17 @@
   	<!-- 使用Spring的aop时需要使用到aspectjweaver包，所以需要添加aspectjweaver包 -->
   	<aspectjweaver.version>1.8.9</aspectjweaver.version>
   	
+  	<!-- 添加JSTL版本 -->
+  	<jstl.version>1.2</jstl.version>
   </properties>
   
   <dependencies>
+  	<!-- 添加使用JSTL标签支持 -->
+  	<dependency>
+	    <groupId>jstl</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>${jstl.version}</version>
+	</dependency>
 	<!-- 添加单元测试包 -->
 	<dependency>
 	    <groupId>junit</groupId>
