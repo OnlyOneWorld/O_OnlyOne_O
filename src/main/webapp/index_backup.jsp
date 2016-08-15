@@ -24,11 +24,22 @@
 		<div class="main">
 			<div class="main-top">
 				<div class="logo">全世界首页</div>
-				<div class="login"><a href="<%=request.getContextPath()%>/jsp/login/userLogin.jsp">登陆</a></div>
-				<div class="register"><a href="<%=request.getContextPath()%>/jsp/register/userRegister.jsp">注册</a></div>
+				<c:if test="${empty requestScope.userEmail}">
+					<div class="login"><a href="pages/loginPage/loginPage.html" id="loginPage" data-toggle="modal" data-target="#myModal">登陆</a></div>
+				<div class="register"><a href="pages/loginPage/loginPage.html" data-toggle="modal" id="registerPage" data-target="#myRegister">注册</a></div>
+				</c:if>
+				<c:if test="${not empty requestScope.userEmail}">
+					<span>欢迎登陆<i style="color:red"><c:out value="${requestScope.userEmail }"></c:out></i></span>
+				</c:if>
 			</div>
 			<div class="main-footer">
-			</div>
-		</div>		
+				
+			</div>			
+		</div>
+		<!-- 将登陆页面包含进来 -->
+		<jsp:include page="jsp/login/login_modal.jsp"></jsp:include>
+
+		<!-- 将注册页面包含进来 -->
+		<jsp:include page="jsp/register/register_modal.jsp"></jsp:include>
 	</body>
 </html>
