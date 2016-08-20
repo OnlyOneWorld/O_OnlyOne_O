@@ -35,7 +35,7 @@
              <!-- LOGO -->
              <div class="topbar-left">
                  <div class="text-center">
-                     <a href="oo_main.html" class="logo"><i class="icon-magnet icon-c-logo"></i><span><i class="md md-album"></i>nly</span><i class="icon-magnet icon-c-logo"></i><span><i class="md md-album"></i>ne</span></a>
+                     <a href="<%=request.getContextPath()%>/oo_index.jsp" class="logo"><i class="icon-magnet icon-c-logo"></i><span><i class="md md-album"></i>nly</span><i class="icon-magnet icon-c-logo"></i><span><i class="md md-album"></i>ne</span></a>
                  </div>
              </div>
              <!-- Button mobile view to collapse sidebar menu -->

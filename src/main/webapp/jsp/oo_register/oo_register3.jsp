@@ -1,12 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link rel="shortcut icon" href="<%=request.getContextPath()%>/assets/images/favicon_1.ico">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="A fully featured admin theme which can be used to build CRM, CMS, etc.">
+		<meta name="author" content="Coderthemes">
 
-		<title>OnlyOne - 注册</title>
+		<link rel="shortcut icon" href="assets/images/favicon_1.ico">
+
+		<title>Ubold - Responsive Admin Dashboard Template</title>
 
 		<link href="<%=request.getContextPath()%>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<%=request.getContextPath()%>/assets/css/core.css" rel="stylesheet" type="text/css" />
@@ -22,29 +26,36 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
 
+        <script src="<%=request.getContextPath()%>/assets/js/modernizr.min.js"></script>
 		<style type="text/css">
 			.checkCode{
 				width: 50%;
 			}
 		</style>
-        <script src="<%=request.getContextPath()%>/assets/js/modernizr.min.js"></script>
-
 	</head>
-	<!-- 导航栏显示:放置用户不想登录时无法返回首页 -->
-            <div class="topbar">
+	<body>
+		<!-- 导航栏显示:放置用户不想登录时无法返回首页 -->
+         <div class="topbar">
 
-                <!-- LOGO -->
-                <div class="topbar-left">
-                    <div class="text-center">
-                        <a href="<%=request.getContextPath()%>/oo_index.jsp" class="logo"><i class="icon-magnet icon-c-logo"></i><span><i class="md md-album"></i>nly</span><i class="icon-magnet icon-c-logo"></i><span><i class="md md-album"></i>ne</span></a>
-                    </div>
-                </div>
-                <!-- Button mobile view to collapse sidebar menu -->
-                <div class="navbar navbar-default" role="navigation">
-                    <!--导航栏内容省略-->
-                </div>
-            </div>
-
+             <!-- LOGO -->
+             <div class="topbar-left">
+                 <div class="text-center">
+                      <a href="<%=request.getContextPath()%>/oo_index.jsp" class="logo"><i class="icon-magnet icon-c-logo"></i><span><i class="md md-album"></i>nly</span><i class="icon-magnet icon-c-logo"></i><span><i class="md md-album"></i>ne</span></a>
+                 </div>
+             </div>
+             <!-- Button mobile view to collapse sidebar menu -->
+             <div class="navbar navbar-default" role="navigation">
+                 <!--导航栏内容省略-->
+             </div>
+         </div>
+		<div class="account-pages">
+			
+		</div>
+		
+		<div class="clearfix">
+			
+		</div>
+		
 		<div class="account-pages"></div>
 		<div class="clearfix"></div>
 		<div class="wrapper-page">
@@ -94,48 +105,26 @@
 								</div>
 							</div>
 						</div>
-
+						
 						<div class="form-group text-center m-t-40">
 							<div class="col-xs-12">
-								<button class="btn btn-success btn-block text-uppercase waves-effect waves-light" type="submit">
+								<button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" type="submit">
 									注册
 								</button>
 							</div>
 						</div>
-						
-						<div class="form-group m-t-20 m-b-0">
-							<div class="col-sm-12 text-center">
-								<h4><b>使用第三方账户注册</b></h4>
-							</div>
-						</div>
-						
-						<div class="form-group m-b-0 text-center">
-							<div class="col-sm-12">
-								<button type="button" class="btn btn-facebook waves-effect waves-light m-t-20">
-		                           <i class="fa fa-facebook m-r-5"></i> Facebook
-		                        </button>
-
-		                        <button type="button" class="btn btn-twitter waves-effect waves-light m-t-20">
-		                           <i class="fa fa-twitter m-r-5"></i> Twitter
-		                        </button>
-
-		                        <button type="button" class="btn btn-googleplus waves-effect waves-light m-t-20">
-		                           <i class="fa fa-google-plus m-r-5"></i> Google+
-		                        </button>
-							</div>
-						</div>
 					</form>
-
 				</div>
 			</div>
 
 			<div class="row">
 				<div class="col-sm-12 text-center">
 					<p>
-						已经有账户?<a href="<%=request.getContextPath()%>/jsp/oo_login/oo_login.jsp" class="text-primary m-l-5"><b>点击登录</b></a>
+						已经有账户?<a href="<%=request.getContextPath()%>/jsp/oo_login/oo_login.jsp" class="text-primary m-l-5"><b>点击登陆</b></a>
 					</p>
 				</div>
 			</div>
+
 		</div>
 
 		<script>
@@ -155,5 +144,6 @@
         <script src="<%=request.getContextPath()%>/assets/js/jquery.scrollTo.min.js"></script>
         <script src="<%=request.getContextPath()%>/assets/js/jquery.core.js"></script>
         <script src="<%=request.getContextPath()%>/assets/js/jquery.app.js"></script>
+
 	</body>
 </html>
