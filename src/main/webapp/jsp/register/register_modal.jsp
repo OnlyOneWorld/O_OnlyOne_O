@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <div class="modal fade" id="myRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
@@ -12,7 +12,7 @@
 	      <!-- 模态窗口的body:是一个用户登陆表单 -->
 	      <div class="modal-body">
 	      	<!-- 用户登陆表单设计 -->
-	      	<form class="form-horizontal" action="<%=request.getContextPath()%>/registerAction!userRegisterAction.action" method="psot">
+	      	<form class="form-horizontal" action="<%=request.getContextPath()%>/registerAction!userRegisterAction.action" method="post">
 	      	  <!-- 用户邮箱 -->
 			  <div class="control-group">
 				  <div class="controls">

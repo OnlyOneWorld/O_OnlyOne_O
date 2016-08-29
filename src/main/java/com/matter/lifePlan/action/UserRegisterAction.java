@@ -14,6 +14,7 @@ import com.common.util.stringCheck.StringOperation;
 import com.matter.lifePlan.dto.UserRegisterForm;
 import com.matter.lifePlan.entity.Users;
 import com.matter.lifePlan.service.UserService;
+import com.matter.lifePlan.user_register.style_one.service.UserRegisterServiceOne;
 
 /** 
  * @author  Administrator: 
@@ -23,18 +24,17 @@ import com.matter.lifePlan.service.UserService;
 //编写package名字和struts.xml文件里面定义的统一
 @ParentPackage("userRegister")
 //编写Action
-@Action(value = "registerAction", results = { 
-		@Result(name = "success", location = "/index.jsp"),
-		@Result(name="failure",location="/jsp/register/register_modal.jsp")}) 
+@Action(value = "_registerAction", results = { 
+		@Result(name = "success", location = "/oo_index.jsp"),
+		@Result(name="failure",location="/jsp/oo_register/register3.jsp")}) 
 //为注册Action指定命名空间
 @Namespace("/")
-
 public class UserRegisterAction {
 	/**
 	 * 将UserService注入Action
 	 */
 	@Autowired
-	private UserService userService;
+	private UserService usersService;
 	
 	//设置最终返回的字符串(这里返回两个字符串,成功则返回success否则返回failure)
 	String success = "success";
@@ -133,19 +133,19 @@ public class UserRegisterAction {
 			returnType = failure;
 		}
 		
-		//编写根据邮箱检索这个邮箱是不是被注册
-		String hql = " from Users users where users.userEmail = ? ";
-
-		//检索这个用户是不是已经被注册，假如被注册的话就返回失败
-		int result = userService.getUserByUserEmail(hql,getUserEmail());
-		if(result > 0)
-		{
-			returnType=failure;
-		}
-		else
-		{
-			returnType = success;
-		}
+//		//编写根据邮箱检索这个邮箱是不是被注册
+//		String hql = " from Users users where users.userEmail = ? ";
+//
+//		//检索这个用户是不是已经被注册，假如被注册的话就返回失败
+//		int result = userService.getUserByUserEmail(hql,getUserEmail());
+//		if(result > 0)
+//		{
+//			returnType=failure;
+//		}
+//		else
+//		{
+//			returnType = success;
+//		}
 		
 		//设置表中的其它字段信息
 		//设置创建日期和更新日期为当前日期
@@ -162,8 +162,9 @@ public class UserRegisterAction {
 		if(returnType.equals(success))
 		{
 			//保存用户
-			userService.save(users);
+			usersService.save(users);
 			//返回主页视图
+			System.out.println("提交成功！");
 			return success;
 		}
 		else
