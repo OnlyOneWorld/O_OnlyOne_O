@@ -19,13 +19,6 @@
         <link href="<%=request.getContextPath()%>/assets/css/pages.css" rel="stylesheet" type="text/css" />
         <link href="<%=request.getContextPath()%>/assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
-        <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
-
         <script src="<%=request.getContextPath()%>/assets/js/modernizr.min.js"></script>
 		<style type="text/css">
 			.checkCode{
@@ -36,7 +29,6 @@
 	<body>
 		<!-- 导航栏显示:放置用户不想登录时无法返回首页 -->
          <div class="topbar">
-
              <!-- LOGO -->
              <div class="topbar-left">
                  <div class="text-center">
@@ -48,13 +40,10 @@
                  <!--导航栏内容省略-->
              </div>
          </div>
-		<div class="account-pages">
-			
-		</div>
+         
+		<div class="account-pages"></div>
 		
-		<div class="clearfix">
-			
-		</div>
+		<div class="clearfix"></div>
 		
 		<div class="account-pages"></div>
 		<div class="clearfix"></div>
@@ -65,7 +54,7 @@
 				</div>
 
 				<div class="panel-body">
-					<form class="form-horizontal m-t-20" action="index.html">
+					<form class="form-horizontal m-t-20" action="<%=request.getContextPath()%>/_registerAction!userRegisterAction.action" method="post">
 
 						<div class="form-group ">
 							<div class="col-xs-12">
@@ -75,7 +64,7 @@
 
 						<div class="form-group ">
 							<div class="col-xs-12">
-								<input class="form-control" type="text" name="userName" required="" placeholder="用户名">
+								<input class="form-control" type="text" name="userPhone" required="" placeholder="手机">
 							</div>
 						</div>
 
@@ -90,22 +79,22 @@
 								<input class="form-control" type="password" name="reUserPassword" required="" placeholder="确认密码">
 							</div>
 						</div>
-						
+						<!-- 
 						<div class="form-group">
 							<div class="col-xs-12">
 								<input class="form-control checkCode" type="text" name="checkCode" required="" placeholder="验证码">
 							</div>
 						</div>
-
+						
 						<div class="form-group">
 							<div class="col-xs-12">
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox-signup" type="checkbox" checked="checked">
+									<input id="checkbox-signup" type="checkbox" name="rememberMe" checked="checked">
 									<label for="checkbox-signup">我同意 <a href="#">《OnlyOne用户注册协议》</a></label>
 								</div>
 							</div>
 						</div>
-						
+						 -->
 						<div class="form-group text-center m-t-40">
 							<div class="col-xs-12">
 								<button class="btn btn-pink btn-block text-uppercase waves-effect waves-light" type="submit">
@@ -113,7 +102,7 @@
 								</button>
 							</div>
 						</div>
-					</form>
+					</form> 
 				</div>
 			</div>
 

@@ -128,10 +128,13 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
     <aop:config>
     	<!-- 测试使用 -->
         <!-- <aop:pointcut id="transactionPointcut" expression="execution(* me.gacl.service..*Impl.*(..))" />
-        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" /> -->
+        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" /> 
+        -->
         
-        <!-- 开发使用 -->
-        <aop:pointcut id="transactionPointcut" expression="execution(* com.matter.lifePlan.service..*Impl.*(..))" />
+        <!-- 开发使用 之前错误(2016-8-30)
+        <aop:pointcut id="transactionPointcut" expression="execution(* com.user_register.style_*.service..*Impl.*(..))" />
+        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />-->
+        <aop:pointcut id="transactionPointcut" expression="execution(* com.matter.lifePlan.user_register.style_two.service..*Impl.*(..))" />
         <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
     </aop:config>
 </beans>

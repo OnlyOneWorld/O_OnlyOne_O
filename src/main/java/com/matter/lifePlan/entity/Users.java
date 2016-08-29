@@ -79,15 +79,17 @@ public class Users {
 	 * @param userPhone
 	 * @param userEmail
 	 */
-	public Users(String userId, String userName, String userPassword,
-			String userPhone, String userEmail) {
-		super();
-		this.userId = userId;
-		this.userName = userName;
-		this.userPassword = userPassword;
-		this.userPhone = userPhone;
-		this.userEmail = userEmail;
-	}
+//	public Users(String userId, String userName, String userPassword,
+//			String userPhone, String userEmail) {
+//		super();
+//		this.userId = userId;
+//		this.userName = userName;
+//		this.userPassword = userPassword;
+//		this.userPhone = userPhone;
+//		this.userEmail = userEmail;
+//	}
+	
+	
 
 
 	/**
@@ -97,6 +99,21 @@ public class Users {
     @Column(name = "userId", unique = true, nullable = false, length = 36)
 	public String getUserId() {
 		return userId;
+	}
+
+	public Users(String userId, String userName, String userPassword,
+			String userPhone, String userEmail, String userFlag,
+			String userCreateDate, String userUpdateDate, String userDeleteDate) {
+//		super();
+		this.userId = userId;
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.userPhone = userPhone;
+		this.userEmail = userEmail;
+		this.userFlag = userFlag;
+		this.userCreateDate = userCreateDate;
+		this.userUpdateDate = userUpdateDate;
+		this.userDeleteDate = userDeleteDate;
 	}
 
 	public void setUserId(String userId) {

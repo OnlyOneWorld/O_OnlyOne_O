@@ -37,4 +37,17 @@
     <!-- 用户登陆模块action设计 -->
     <package name="userLogin" extends="struts-default">
     </package>
+    
+    <!-- 重新规划用户注册模块 -->
+    <!-- 第一种注册方式: -->
+    <package name="demo1_userRegister" extends="struts-default">
+    </package>
+    
+    <!-- 第二种注册方式: -->
+    <package name="userRegisterTwo" extends="struts-default">	
+    </package>
+    
+    <!-- 第三种注册方式: -->
+    <package name="userRegisterThree" extends="struts-default">
+    </package>
 </struts>
