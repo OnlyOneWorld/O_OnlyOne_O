@@ -191,21 +191,16 @@
   </dependencies>
   <build>
   	<finalName>onlyOne</finalName>
-  	<plugins>
-  		<plugin>
-  			<!-- 使用tomcat作为web容器，将jetty注释掉
-	 		<groupId>org.eclipse.jetty</groupId>
-		    <artifactId>jetty-maven-plugin</artifactId>
-		    <version>${jetty.version}</version>
-		     -->
-		    
+  	<!--  --><plugins>
+  		<!-- 这是2016-9-3之前一直使用的项目启动方式，为了解决不能断点调试的问题，现在将这部分代码注释掉 -->
+  		<!--<plugin>
 		    <groupId>org.apache.tomcat.maven</groupId>
 	        <artifactId>tomcat7-maven-plugin</artifactId>
 	        <version>${tomcat.version}</version>
-		    <!-- 在打包的阶段就使用jetty:run来直接运行 -->
+		     在打包的阶段就使用jetty:run来直接运行 
 		    <executions>
 		    	<execution>
-		    		<!-- 设置在打包的阶段 -->
+		    		设置在打包的阶段 
 		    		<phase>package</phase>
 		    		<goals>
 		    			<goal>
@@ -214,9 +209,22 @@
 		    		</goals>
 		    	</execution>
 		    </executions>
-  		</plugin>
+  		</plugin>-->
+  		<!-- 以下的这个plugin是为了能够实现使用Tomcat7容器实现Maven部署项目断点调试二新增加的 -->
+  		<plugin>
+  		   <!-- 导入Tomcat7插件 -->
+           <groupId>org.apache.tomcat.maven</groupId>
+           <artifactId>tomcat7-maven-plugin</artifactId>
+           <version>${tomcat.version}</version>
+           <configuration>
+               <port>8080</port><!-- 服务器端口号，默认是8080 -->
+               <path>/O_OnlyOne_O</path><!-- 访问应用的路径 -->
+               <uriEncoding>UTF-8</uriEncoding><!-- 项目编码方式 -->
+               <finalName>O_OnlyOne_O</finalName><!-- 项目名字 -->
+               <url>http://localhost:8080/O_OnlyOne_O/</url>
+               <server>tomcat7</server><!-- 服务器的名字 -->
+           </configuration>
+        </plugin>
   	</plugins>
   </build>
-  
-  
 </project>
