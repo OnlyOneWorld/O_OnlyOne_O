@@ -233,6 +233,7 @@ public class UserRegisterDemoTwoAction {
 		String returnType;
 		
 		//获取当前日期并格式化
+		System.out.println("Action被请求到！");
 		Date date = new Date();
 		//获取日期格式化类实例
 		DateFormat dateFormat = new DateFormat();
