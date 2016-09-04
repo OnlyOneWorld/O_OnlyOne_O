@@ -42,6 +42,7 @@ private UserServiceI userService;
     @Test 
     public void testSaveMethod(){
         User user = new User();
+        
         user.setId(UUID.randomUUID().toString().replaceAll("-", ""));
         user.setName("孤傲苍狼");
         user.setPwd("123");

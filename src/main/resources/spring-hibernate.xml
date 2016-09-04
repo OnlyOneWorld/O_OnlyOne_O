@@ -80,6 +80,7 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
                 <!-- --><value>me.gacl.model</value> 
                 <!-- 系统用户模块设计 -->
                 <value>com.matter.lifePlan.entity</value>
+                <value>com.testajax.entity</value>
             </list>
         </property>
 
@@ -134,7 +135,9 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
         <!-- 开发使用 之前错误(2016-8-30)
         <aop:pointcut id="transactionPointcut" expression="execution(* com.user_register.style_*.service..*Impl.*(..))" />
         <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />-->
-        <aop:pointcut id="transactionPointcut" expression="execution(* com.matter.lifePlan.user_register.style_two.service..*Impl.*(..))" />
+        <!-- <aop:pointcut id="transactionPointcut" expression="execution(* com.matter.lifePlan.user_register.style_two.service..*Impl.*(..))" /> -->
+        <!--<aop:pointcut id="transactionPointcut" expression="execution(* com.testajax.service..*Impl.*(..))" />-->
+        <aop:pointcut id="transactionPointcut" expression="execution(* com.spring.service..*Impl.*(..))" />
         <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />
     </aop:config>
 </beans>
