@@ -18,21 +18,17 @@
     http://www.springframework.org/schema/util    
     http://www.springframework.org/schema/util/spring-util.xsd">    
     
-    <!-- 引入属性文件: config.properties位于src/main/resource目录下 -->
-    <context:property-placeholder location="classpath:config.properties"/>
-    
+    <!-- 引入属性文件: config.properties位于src/main/resource目录下 
+    <context:property-placeholder location="classpath:config.properties"/>-->
     
     <!-- 这是之前的需要扫描的包，在这里备份一下为了测试为什么用户注册没有持久化数据库
-        me.gacl.dao,me.gacl.dao.impl,
+    me.gacl.dao,me.gacl.dao.impl,
     me.gacl.service,
     com.common.base,
+    com.matter.lifePlan,com.testajax
     -->
-    <context:component-scan base-package="
-    com.matter.lifePlan.user_register.style_two,
-    "
-    ></context:component-scan>
+    <context:component-scan base-package="com.spring"></context:component-scan>
     
-     
     <!-- 设置注解自动扫描dao和service包下的Java文件
     <context:component-scan base-package="com.matter.lifePlan.user_register"></context:component-scan>
    	 -->

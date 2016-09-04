@@ -50,4 +50,7 @@
     <!-- 第三种注册方式: -->
     <package name="userRegisterThree" extends="struts-default">
     </package>
+    
+    <package name="ajax" extends="struts-default">
+    </package>
 </struts>
