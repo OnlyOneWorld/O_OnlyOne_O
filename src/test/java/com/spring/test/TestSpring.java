@@ -42,6 +42,12 @@ public class TestSpring {
 		userService.save(data);
 	}
 	
+	@Test
+	public void testIoc()
+	{
+		
+	}
+	
 	@After
 	public void after()
 	{
