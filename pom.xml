@@ -45,11 +45,24 @@
   	<!-- 使用Spring的aop时需要使用到aspectjweaver包，所以需要添加aspectjweaver包 -->
   	<aspectjweaver.version>1.8.9</aspectjweaver.version>
   	
+  	<!-- 添加Json的版本依赖 -->
+  	<json.version>20090211</json.version>
+  	
   	<!-- 添加JSTL版本 -->
   	<jstl.version>1.2</jstl.version>
+  	
+  	<!-- 添加读取并处理excel的jar包 -->
+  	<jxl.version>2.6.12</jxl.version>
   </properties>
   
   <dependencies>
+  <!-- 添加Json -->
+	<dependency>
+	    <groupId>org.json</groupId>
+	    <artifactId>json</artifactId>
+	    <version>${json.version}</version>
+	</dependency>
+  
   	<!-- 添加使用JSTL标签支持 -->
   	<dependency>
 	    <groupId>jstl</groupId>
@@ -188,6 +201,13 @@
 	    <version>${log4j.version}</version>
 	</dependency>
 	 -->
+	 
+	 <!-- 添加读取并处理Excel的jar包 -->
+	 <dependency>
+	    <groupId>net.sourceforge.jexcelapi</groupId>
+	    <artifactId>jxl</artifactId>
+	    <version>${jxl.version}</version>
+	</dependency>
   </dependencies>
   <build>
   	<finalName>onlyOne</finalName>

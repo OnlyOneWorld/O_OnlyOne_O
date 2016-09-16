@@ -24,10 +24,10 @@ public class TestAjaxJunit {
 	{
 		System.out.println("初始化开始！");
 		//初始化配置文件
-		ApplicationContext ac = new ClassPathXmlApplicationContext(
-				new String[] { "applicationContext.xml", "spring-hibernate.xml"});
+//		ApplicationContext ac = new ClassPathXmlApplicationContext(
+//				new String[] { "applicationContext.xml", "spring-hibernate.xml"});
 		//获得AjaxService实例
-		AjaxService as = (AjaxService)ac.getBean("ajaxService");
+//		AjaxService as = (AjaxService)ac.getBean("ajaxService");
 	}
 	
 	//之后执行方法
@@ -54,5 +54,19 @@ public class TestAjaxJunit {
 //		ta.setText("我是一个好人，信不信由你！");
 		
 		as.save(ta);
+	}
+	
+	
+	@Test
+	public void test1()
+	{
+		int i = 10;
+		while(i>0){
+			i=i+1;
+			if(i==10){
+				System.out.println("i= "+i);
+				break;
+			}
+		}
 	}
 }
