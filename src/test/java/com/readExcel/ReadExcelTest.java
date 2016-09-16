@@ -37,5 +37,9 @@ public class ReadExcelTest {
 		a9 b9 b10 b11 b12 b13 b14 b15 b16 b17 
 		a10 b10 b11 b12 b13 b14 b15 b16 b17 b18 
 		*/
+		
+		String user = "";
+		StringBuffer sb = new StringBuffer();
+		StringBuilder sbd = new StringBuilder();
 	}
 }
