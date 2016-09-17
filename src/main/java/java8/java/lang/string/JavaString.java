@@ -1,4 +1,8 @@
 package java8.java.lang.string;
+
+import java.util.HashMap;
+import java.util.Hashtable;
+
 /** 
  * @author  Administrator: 
  * @version 创建时间：2016-9-16 下午11:16:55 
@@ -23,6 +27,8 @@ public class JavaString {
 		 */
 		byte bytes [] = new byte[1024];
 		
+		HashMap hp = new HashMap();
+		Hashtable<String, String> ht = new Hashtable<>();
 		
 		
 		
