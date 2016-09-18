@@ -1,8 +1,11 @@
 package java8.java.lang.hashmap;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Hashtable;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 public class HashMapTest {
 
@@ -75,5 +78,28 @@ public class HashMapTest {
 		
 		//打印执行hashTable的put方法的时间差
 		System.out.println("执行HashMap的put方法的时间为: "+(time2 - time1));
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @parameter
+	 */
+	public void addHashMap()
+	{
+		Map<String, Object> map = new HashMap<String, Object>();
+		
+		//test put
+		map.put("userName", "");  //测试添加一个空值
+		
+		//测试键为空
+		map.put("", "");
+		map.put("", "");
+		
+	}
+	
+	public void setHashSet()
+	{
+		Set<String> set = new HashSet<String>();
 	}
 }
