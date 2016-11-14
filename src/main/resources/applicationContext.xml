@@ -32,23 +32,6 @@
     <!-- 设置注解自动扫描dao和service包下的Java文件
     <context:component-scan base-package="com.matter.lifePlan.user_register"></context:component-scan>
    	 -->
-   	 
-   	 <!-- 演示的设值注入 -->
-   	 <!-- <bean id="testInjectionDao" class="com.springIoc.dao.Impl.TestInjectionDaoImpl"></bean>
-   	 
-   	 <bean id="testInjectionService" class="com.springIoc.service.Impl.TestInjectionServiceImpl">
-   	 	设值注入，必须在对应的class张提供需要注入对象的setter方法
-   	 	<property name="testInjectionDao" ref="testInjectionDao"></property>
-   	 </bean> -->
-   	 
-   	 <!-- 演示的构造注入 
-   	 <bean id="testInjectionDao" class="com.springIoc.dao.Impl.TestInjectionDaoImpl"></bean>
-   	 
-   	 <bean id="testInjectionService" class="com.springIoc.service.Impl.TestInjectionServiceImpl">
-		<constructor-arg name="testInjectionDao" ref="testInjectionDao"></constructor-arg>
-   	 </bean>-->
-   	 
-   	 <!-- 测试Spring的Bean的作用域配置项 -->
-   	 <bean id="testSpringBeanArea" class="com.spring_stydy.BeanOperation.BeanArea" scope="prototype"></bean>
+   
 </beans>
     
