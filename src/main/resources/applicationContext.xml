@@ -18,8 +18,8 @@
     http://www.springframework.org/schema/util    
     http://www.springframework.org/schema/util/spring-util.xsd">    
     
-    <!-- 引入属性文件: config.properties位于src/main/resource目录下 
-    <context:property-placeholder location="classpath:config.properties"/>-->
+    <!-- 引入属性文件: config.properties位于src/main/resource目录下 -->
+    <context:property-placeholder location="classpath:config.properties"/>
     
     <!-- 这是之前的需要扫描的包，在这里备份一下为了测试为什么用户注册没有持久化数据库
     me.gacl.dao,me.gacl.dao.impl,
@@ -41,12 +41,12 @@
    	 	<property name="testInjectionDao" ref="testInjectionDao"></property>
    	 </bean> -->
    	 
-   	 <!-- 演示的构造注入 -->
+   	 <!-- 演示的构造注入 
    	 <bean id="testInjectionDao" class="com.springIoc.dao.Impl.TestInjectionDaoImpl"></bean>
    	 
    	 <bean id="testInjectionService" class="com.springIoc.service.Impl.TestInjectionServiceImpl">
 		<constructor-arg name="testInjectionDao" ref="testInjectionDao"></constructor-arg>
-   	 </bean>
+   	 </bean>-->
    	 
    	 <!-- 测试Spring的Bean的作用域配置项 -->
    	 <bean id="testSpringBeanArea" class="com.spring_stydy.BeanOperation.BeanArea" scope="prototype"></bean>
